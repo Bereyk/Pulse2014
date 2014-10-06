@@ -1,0 +1,33 @@
+( ͡° ͜ʖ ͡°) Epic Face
+
+Pasos para conectarme a Git
+
+1. Decirle a Git quien soy
+	git config --global user.name "ISCSoberanis"
+
+2. Configurar el email
+	git config --global user.email "cmendozasoberanis@gmail.com"
+
+3. Necesitamos una llave SSH. Para ello usamos el siguiente comando para generar una clave SSH.
+	ssh-keygen
+
+Nos pedira guardar la clave en un archivo, le damos un nombre y listo. Este archivo se guarda con la extension .pub.
+
+Despues, vemos el contenido del archivo con el comando cat
+	cat nombre_de_archivo.pub
+
+Y nos aparecera algo como lo siguiente
+
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDM47CunShFTGVcvBcMGecN41gf6B2c9XfyM+iMRQBDjyaIQXM/Uu9NOeb9yimNeQSC/gY3yHDk2YmuHKI3WNkGkwdmtlc8I6BAvhSgPtJsYRNwTnWMD5b9anw52LXU1FjS5SfzbnEKPZ9RhNYjSc4QhO8Rf8x0eJ5vH0Xji7rBZiPxYzr/Dzz/CD0pPcdcaIny00pi1e5vPzlqI67QEQ3uAMuyVuunhj8HmN3ShytNgTe6URZ3fK9bMIir5AqecISRKm9eOJy/G1nTdKZ9fFlpnLSzvm1iFLsV/Lf7Dv8zUWghqh+xyOoawPcudrZ7Ku7HFeTRdO6TeP4aZzHN9SuD varko@varkoPC
+
+Copiamos todo y lo pegamos en GitHub
+
+4. Lo siguiente es realizar los siguientes comandos por orden
+
+	- git init (iniciamos el servicio git)
+	- touch readme.md
+	- git add archivos (aqui agregamos los archivos a subir)
+	- git commit -m "comentarios" (hacemos commit cada vez que subamos un/unos archivo(s))
+	- git remote add origin https://github.com/ISCSoberanis/repositorio.git
+	- git pull origin master (para traer lo que exista en el repo)
+	- git push origin master (para enviar los archivos al repo)
