@@ -31,3 +31,30 @@ Copiamos todo y lo pegamos en GitHub
 	- git remote add origin https://github.com/ISCSoberanis/repositorio.git
 	- git pull origin master (para traer lo que exista en el repo)
 	- git push origin master (para enviar los archivos al repo)
+
+
+POSIBLES ERRORES
+
+Que hacer si aparece el siguiente mensaje?
+
+Permission denied (publickey). fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+
+Thats how i`ve fixed it!! Go to the project directory using the Terminal and check it out
+
+$git remote -v
+You will get something like this:
+
+origin ssh://git@github.com/yourGithubUserName/yourRepo.git (fetch) origin ssh://git@github.com/yourGithubUserName/yourRepo.git (push)
+
+If your are using anything different then git@github.com, open the config File on git directory by typing the command:
+
+vi .git/config
+And configure the line
+
+[remote "origin"]
+
+url = ssh://git@github.com/yourGithubUserName/yourRepo.git
+
+fetch = +refs/heads/*:refs/remotes/origin/
